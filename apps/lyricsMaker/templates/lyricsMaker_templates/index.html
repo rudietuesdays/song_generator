@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>i got feels</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'lyricsMaker_static/css/style.css' %}">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'lyricsMaker_static/js/script.js' %}"></script>
+</head>
+
+<body>
+    <div id="home_wrapper">
+        <div id="header">
+            <h1>You've got a lot of feels.</h1>
+            <h1>Write a song about it.</h1>
+        </div>
+        <div id="main_content">
+            {% if messages%}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <form class="building_blocks" action="{% url 'lyricsMaker:index' %}" method="post">
+                {% csrf_token %}
+                <select class="genres" name="genre">
+                        <option selected disabled>Genre</option>
+                        <option value="hiphop" name="genre">Hip Hop</option>
+                        <option value="metal" name="genre">Metal</option>
+                        <option value="pop" name="genre">Pop</option>
+                        <option value="punk rock" name="genre">Punk Rock</option>
+                        <option value="country" name="genre">Country</option>
+                    </select>
+                <select class="subject" name="subject">
+                        <option selected disabled>Subject Matter</option>
+                        <option name="subject" value="love">Love</option>
+                        <option name="subject" value="break_ups">Break-ups</option>
+                        <option name="subject" value="politics">Politics</option>
+                    </select>
+                <label for="pronouns">Who's it about?</label>
+                <input type="text" name="pronouns" placeholder="ex: Susan, Dumbledore" size="35">
+                <p><input type="submit" value="make music"></p>
+            </form>
+            <form class="" action="/library" method="post">
+                {% csrf_token %}
+                <input type="submit" value="give me ideas">
+            </form>
+            <br>
+            <div class='to_bey'>
+                <form class="" action="/song" method="post">
+                    {% csrf_token %}
+                    <input type="submit" name="" value="Not now, take me to Bey">
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>i got feels | queen bey's page</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'lyricsMaker_static/css/style.css' %}">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="{% static 'lyricsMaker_static/js/script.js' %}"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <!-- <div class="song">
+                <p>{{song.genre}}</p>
+                <p>{{song.subj}}</p>
+                <p>{{song.pronouns}}</p>
+            </div> -->
+            <div id="bey_songs">
+                <a href="/">home</a> |
+                <a href="/library">library</a>
+                <h2>show me bey</h2>
+                <form class="bey_moods">
+                    <select id='mood'>
+                        <option selected disabled>current mood</option>
+                        <option value="happy">happy</option>
+                        <option value="dancey">dancey</option>
+                        <option value="sad">sad</option>
+                        <option value="vengeful">vengeful</option>
+                        <option value="loving">loving</option>
+                        <input type="submit" name="" value="get it">
+                    </select>
+                </form>
+                <div class="player">
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>i got feels | library</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'lyricsMaker_static/css/style.css' %}">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'lyricsMaker_static/js/script.js' %}"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="main_content">
+            <a href="/">home</a> |
+            <a href="/song">bey</a>
+            <h1>music library</h1>
+            <div class="songs">
+                {% for song in songs%}
+                <div class="song">
+                    <p>Genre: <em>{{song.genre}}</em></p>
+                    <p>Topic: <em>{{song.subj}}</em></p>
+                    <p>Who's it about? <em>{{song.pronouns}}</em></p>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

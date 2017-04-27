@@ -1,0 +1,85 @@
+* {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: sans-serif;;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0 none;
+    /*outline: 1px solid red;*/
+    padding: 0;
+    margin: 0 auto;
+}
+
+#home_wrapper {
+    background: lightgray url("../imgs/feels.gif") no-repeat fixed;
+    background-size: cover;
+    padding: 10px;
+    width: 97%;
+}
+
+#wrapper {
+    background: gray;
+    padding: 10px;
+    width: 97%;
+}
+
+#header, #main_content, #bey_songs {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 50px;
+}
+
+.to_bey {
+    margin: 20px 0px;
+}
+
+.songs {
+    display: inline-flex;
+    flex-flow: row wrap;
+}
+
+.song {
+    margin: 5px;
+    padding: 5px;
+    width: 150px;
+    height: 140px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.player {
+    margin-bottom: 200px;
+}
+
+h1, h2{
+    font-size: 2em;
+    font-weight: bold;
+    padding: 5px;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+}
+
+input[type=submit] {
+  border-radius: 5px;
+  -moz-box-shadow: 2px 2px #ccc;
+  -webkit-box-shadow: 2px 2px #ccc;
+  box-shadow: 2px 2px #ccc;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 1.2rem;
+    margin-left: 5px;
+}
+
+em {
+    font-weight: bold;
+}
